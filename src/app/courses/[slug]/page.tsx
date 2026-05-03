@@ -1,4 +1,5 @@
 import {Heading} from "@/components/ui/Heading";
+import {Button} from "@/components/ui/Button";
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
     const {slug} = await params
@@ -9,6 +10,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             <Heading level='h2'>Вакансии Photoshop</Heading>
             <Heading level='h2'>Преимущества специалиста</Heading>
             <Heading level='h4'>Мобильность специалиста</Heading>
+            <Button variant='primary'>Button</Button>
+            <Button variant='ghost'>Button</Button>
         </div>
     )
 

@@ -16,7 +16,7 @@ const styles = {
 
 export function Heading({ level='h1', children, className}: HeadingProps) {
 
-    const Tag=level;
+    const Tag= level;
     return (
         <Tag className={clsx(styles[level], className)}>
             {children}
