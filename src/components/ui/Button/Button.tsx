@@ -42,10 +42,14 @@ export function Button({ variant ='primary', children, className, arrow='none', 
             <span className={'inline-flex items-center'}>
                 {children}
 
-                {arrow === 'right' && <ArrowIcon className={'ml-3'}/>
-                }
-
-                {arrow === 'down' && <ArrowIcon/>
+                {arrow !== 'none' &&
+                    <ArrowIcon className={clsx(
+                        'ml-3',
+                        {
+                            'rotate-90': arrow === 'down',
+                        }
+                    )}
+                    />
                 }
             </span>
         </button>
