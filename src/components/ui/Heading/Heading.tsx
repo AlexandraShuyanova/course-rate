@@ -1,6 +1,11 @@
 import React from "react";
 import clsx from 'clsx';
-import {HeadingProps} from "@/components/ui/Heading/Heading.props";
+
+interface HeadingProps {
+    level?: 'h1' | 'h2' | 'h3' | 'h4';
+    children: React.ReactNode;
+    className?: string;
+}
 
 const styles = {
     h1: 'text-[26px] font-medium leading-none',

@@ -1,6 +1,11 @@
 import React from "react";
 import clsx from 'clsx';
-import {ParagraphProps} from './Paragraph.props';
+
+interface ParagraphProps {
+    children: React.ReactNode;
+    className?: string;
+    size?: 'large' | 'middle' | 'small';
+}
 
 const styles = {
     large: 'text-[18px] leading-[29px] font-normal',

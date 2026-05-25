@@ -1,6 +1,11 @@
 import React from "react";
 import clsx from 'clsx';
-import {TagProps} from './Tag.props';
+
+interface TagProps extends React.HTMLAttributes<HTMLDivElement> {
+    children: React.ReactNode;
+    variant?: 'ghost' | 'red' | 'grey' | 'green' | 'primary';
+    href?: string;
+}
 
 const styles = {
     ghost: 'inline-flex items-center justify-center py-[2px] px-[10px] h-[23px] font-medium rounded-[20px] border border-[var(--border-color)] bg-transparent text-[var(--black)] cursor-pointer text-[13px] leading-[15px]',

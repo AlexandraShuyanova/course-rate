@@ -1,7 +1,14 @@
 import React from "react";
 import clsx from 'clsx';
-import type {ButtonProps} from './Button.props';
 import ArrowIcon from '@/icons/arrow.svg'
+
+interface ButtonProps
+    extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+    variant?: 'primary' | 'ghost' ;
+    children: React.ReactNode;
+    className?: string;
+    arrow?: 'right' | 'down' | 'none';
+}
 
 const styles = {
     primary: `
