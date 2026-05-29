@@ -3,6 +3,7 @@ import {Button} from "@/components/ui/Button/Button";
 import {Paragraph} from "@/components/ui/Paragraph/Paragraph";
 import {Tag} from "@/components/ui/Tag/Tag";
 import {Rating} from "@/components/ui/Rating/Rating";
+import {Menu} from "@/components/Menu/Menu";
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
     const {slug} = await params
@@ -30,6 +31,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             <Paragraph size={'small'}>Напишу сразу в двух курсах, так как проходил оба.
                 Java будет многим непросвещённым сложновата в изучении, но здесь перевес из-за лидирующего положения
                 языка как самого популярного в программировании.</Paragraph>
+            <Menu></Menu>
         </div>
     )
 
